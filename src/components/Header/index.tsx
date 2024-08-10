@@ -1,6 +1,6 @@
 import React from 'react';
 import { FEED_PAGE } from '../../utils/constant';
-import HomePageLogo from '@images/HomepageLogo.jpg';
+import HomePageLogo from '@images/homepage_logo.jpg';
 
 interface HeaderProps {
 	activeRoute: string;
