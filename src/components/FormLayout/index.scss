@@ -1,0 +1,15 @@
+.modal-container {
+	position: relative;
+	padding: 2px;
+	z-index: 0;
+	box-sizing: border-box;
+	background: linear-gradient(to bottom right, #969696, #343434);
+	border-radius: 8px;
+	overflow: hidden;
+	min-width: 460px;
+
+	.modal-children {
+		box-sizing: border-box;
+		border-radius: inherit;
+	}
+}
