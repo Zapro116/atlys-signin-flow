@@ -36,7 +36,7 @@ module.exports = {
 				},
 			},
 			{
-				test: /\.scss$/,
+				test: /\.(css|scss)$/i,
 				use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
 			},
 			{
@@ -50,9 +50,6 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: './public/index.html',
 		}),
-		// new CopyWebpackPlugin({
-		// 	patterns: [{ from: 'src/assets/images', to: 'images' }],
-		// }),
 	],
 	devServer: {
 		static: {
