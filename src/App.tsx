@@ -1,11 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import ViewSkeleton from './components/ViewSkeleton';
-import { FEED_PAGE, LOGIN_PAGE } from './utils/constant';
 import Popover from './components/Popover';
+import ViewSkeleton from './components/ViewSkeleton';
 import { routeConfig } from './config/routes';
+import { FEED_PAGE, LOGIN_PAGE } from './utils/constant';
+import AtlysLogo from '@images/atlys_logo.jpg';
 
 const App: React.FC = () => {
 	const [page, setPage] = useState<string>(LOGIN_PAGE);
+
+	// Dynamically setting the favicon
+	useEffect(() => {
+		const newLink = document.createElement('link');
+		newLink.rel = 'icon';
+		newLink.href = AtlysLogo;
+		document.head.appendChild(newLink);
+	}, []);
 
 	const handleSubmit = (formData: Record<string, string>) => {
 		console.log('Form submitted:', formData);
